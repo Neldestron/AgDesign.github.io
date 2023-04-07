@@ -505,6 +505,7 @@ article {
     }
     .article-container {
         display: block;
+        min-height:760px;
     }
     .article-img {
         width: 100%;
