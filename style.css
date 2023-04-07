@@ -1,23 +1,19 @@
 
 body {
     font-family: sans-serif;
-    box-sizing: border-box;
+    box-sizing: content-box;
     margin: 0;
     width: 100%;
     height: 90vh;
-    overflow: hidden;
     background: #333333;
     background: linear-gradient(45deg,#333333,#000000,rgb(131, 1, 1));
     background-size: 400% 400%;
     animation: fondo 10s alternate infinite;
-
 }
 
 .body-container {
     width: 100%;
-    /* min-width: 840px; */
     height: 100%;
-
 }
 
 .imgfondo {
@@ -175,6 +171,46 @@ article {
     width: 100%;
 }
 
+
+.article-img {
+    width: 50%;
+    height: 100%;
+}
+
+.img {
+    position: absolute;
+    width: 48%;
+    min-width: 400px;
+    transition: 1s;
+}
+
+.img1{
+    left: -18%;
+    animation: rotacion 20s linear infinite;
+    transition: 1s;
+}
+
+.img2 {
+    top: -6%;
+    z-index: -1;
+    transition: 1s;
+    filter: drop-shadow(14px 10px 8px black) drop-shadow(-1px 1px 2px black) ; /* esto es para colocarle sombras a las imagenes */
+}
+
+.article {
+    width: 48%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-plans {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
 .btn_article {
     background-color: rgba(255, 255, 255, 0.452);
     position: absolute;
@@ -221,45 +257,6 @@ article {
     transition: .4s;
     box-shadow: 0 0 5px white;
 }
-.article-img {
-    width: 50%;
-    height: 100%;
-}
-
-.img {
-    position: absolute;
-    width: 53%;
-    min-width: 400px;
-    transition: 1s;
-}
-
-.img1{
-    left: -18%;
-    animation: rotacion 20s linear infinite;
-    transition: 1s;
-}
-
-.img2 {
-    top: -6%;
-    z-index: -1;
-    transition: 1s;
-    filter: drop-shadow(14px 10px 8px black) drop-shadow(-1px 1px 2px black) ; /* esto es para colocarle sombras a las imagenes */
-}
-
-.article {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.article-plans {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    position: relative;
-}
 
 .article-plans ul {
     list-style: none;
@@ -291,19 +288,22 @@ article {
     margin: 0;
     filter: none;
     transition: 1s;
-    z-index: 1;
+    z-index: 2;
 }
 .t2{
     margin-left: 50%;
     filter: blur(2px);
     transition: .8s;
-    z-index: 2;
+    z-index: 1;
     user-select: none;
 }
 .t3{
-    margin-left: 100%;
+    margin-left: 50%;
+    width: 0px;
+    height: 0px;
     filter: blur(20px);
-    z-index: 3;
+    z-index: -2;
+    opacity: .1;
     transition: .7s;
     user-select: none;
 }
@@ -369,6 +369,15 @@ article {
     }
     
 }
+@keyframes fondo {
+    to{
+        background-position: 0% 50%;
+    }
+    from{
+        background-position: 100% 50%;
+    }
+
+}
 
 
 @media screen and (max-width:1600px) {
@@ -376,7 +385,6 @@ article {
         width: 300px;
         height: 100%;
         color: white;
-        position: absolute;
         justify-content: center;
         align-items: center;
     }
@@ -387,7 +395,6 @@ article {
         width: 260px;
         height: 100%;
         color: white;
-        position: absolute;
         justify-content: center;
         align-items: center;
     }
@@ -420,10 +427,6 @@ article {
     .plans{
         width: 240px;
         height: 100%;
-        color: white;
-        position: absolute;
-        justify-content: center;
-        align-items: center;
     }
 }
 
@@ -483,19 +486,20 @@ article {
 }
 
 @media screen and (max-width:850px) {
-    .imgfondo {
-        width: 0%;
-        height: 0%;
-        min-height: 0px;
-        min-width: 0px;
+     .imgfondo {
+        display: none;
     }
     .saludo {
         width: 100px;
+        margin: 0;
     }
     
     .saludo p{
         margin-right: 0px;
         user-select: none;
+    }
+    .article-container {
+        display: block;
     }
     .article-img {
         width: 100%;
@@ -506,13 +510,12 @@ article {
     
     .img1{
         left: 0%;
+        position: relative;
     }
     
     .img2 {
         top: 20%;
-    }
-    .article-container {
-        display: inline-block;
+        left:1%;
     }
 
     .article {
@@ -520,23 +523,22 @@ article {
     }
     
     .plans{
-        width: 80%;
+        width: 90%;
     }
     .t1{
-        margin: 0;
-        filter: none;
-        transition: 1s;
-        z-index: 1;
+        margin-left: 0;
     }
     .t2{
-        margin-left: 80%;
+        margin-left: 0%;
+        filter: opacity(1%);
     }
     .t3{
-        margin-left: 150%;
+        margin-left: 0%;
+        visibility: hidden;
     }
 
     .btn-right{
-        right: -71%;
-    }
+        right: -80%;
+    } 
     
 }
