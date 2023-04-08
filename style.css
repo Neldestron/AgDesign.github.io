@@ -504,11 +504,14 @@ article {
         user-select: none;
     }
     .article-container {
-        display: block;
-        min-height:760px;
+        height: auto;
+        width: auto;
+        display: inline-block;
+        min-height: 760px;
     }
     .article-img {
         width: 100%;
+        height: 60vh;
     }
     .img {
         width: 100%;
@@ -517,7 +520,7 @@ article {
     .img1{
         left: 0%;
         position: relative;
-        animation: none;
+        border-radius: 100%;
     }
     
     .img2 {
@@ -527,10 +530,12 @@ article {
 
     .article {
         width: 100%;
+        height:60vh;
     }
     
     .plans{
         width: 90%;
+        height: 100%;
     }
     .t1{
         margin-left: 0;
