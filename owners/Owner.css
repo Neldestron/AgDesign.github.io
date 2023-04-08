@@ -238,6 +238,10 @@ article {
         width: 100%;
         height: 40vh;
         margin-top: 5px;
+        animation: none;
+    }
+    .rotation{
+        animation: none;
     }
     .Owner-img {
         width: 100%;
