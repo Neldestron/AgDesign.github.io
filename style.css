@@ -521,6 +521,7 @@ article {
         left: 0%;
         position: relative;
         border-radius: 100%;
+        animation: none;
     }
     
     .img2 {
