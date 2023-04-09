@@ -1,1 +1,146 @@
 @import url(/owners/Owner.css);
+body{
+    overflow:scroll;
+    overflow-x: hidden;
+    
+}
+body::-webkit-scrollbar {
+    width: 12px;             /* width of the entire scrollbar */
+  }
+  
+body::-webkit-scrollbar-track {
+    background: black;
+    border-radius: 20px;         /* color of the tracking area */
+  }
+  
+body::-webkit-scrollbar-thumb {
+    background-color: white;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid black;  /* creates padding around scroll thumb */
+  }
+
+article {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.information-container{
+    width: 100%;
+    height: auto;
+}
+
+.information{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+}
+
+.information1,.information2,.information3{
+    position: relative;
+    width: 40%;
+    height: 100%;
+    border-radius: 4vh;
+    display: grid;
+    place-items: center;
+    background-color: black;
+    overflow: hidden;
+}
+.information1::before,.information2::before,.information3::before{
+    content: '';
+    position: absolute;
+    width:  220%;
+    height: 220%;
+    background-image: conic-gradient(transparent,transparent,transparent,red);
+    animation: rotate 4s linear infinite;
+}
+.information1::after,.information2::after,.information3::after{
+    content: '';
+    position: absolute;
+    width: 220%;
+    height: 220%;
+    background-image: conic-gradient(transparent,transparent,transparent,rgb(136, 136, 136));
+    animation: rotate 4s linear infinite;
+    animation-delay: -2s;
+}
+
+
+.information1{
+    margin-left: auto;
+    margin-right: 3vh;
+}
+.information2{
+    margin-right: auto;
+    margin-left: 3vh;
+}
+.information3{
+    margin-left: auto;
+    margin-right: 3vh;
+}
+.information-tittle,.information-plan,.information-price{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.information-1,.information-2,.information-3{
+    position: absolute;
+    display: inline-block;
+    inset: 5px;
+    border-radius: 4vh;
+    background-color: black;
+    z-index: 2;
+}
+
+.information-tittle{
+    height: 10%;
+    text-align: center;
+}
+.information-tittle h1{
+    font-size: 3vh;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 500%;
+    animation: color 10s linear infinite;
+}
+.hg{
+    background-image: linear-gradient(to left,white,white,gold,white,white);
+}
+.hs{
+    background-image: linear-gradient(to left,white,white,rgb(94, 92, 92),white,white);
+}
+.hb{
+    background-image: linear-gradient(to left,white,white,#a1671b,white,white);
+}
+.information-plan{
+    height: 80%;
+    color: white;
+}
+
+.information-price{
+    height: 10%;
+}
+
+.information-price a {
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes color {
+    to{
+        background-position: 0% 50%;
+    }
+    from{
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
