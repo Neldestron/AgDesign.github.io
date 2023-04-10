@@ -1,5 +1,5 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
     box-sizing: content-box;
     margin: 0;
     width: 100%;
@@ -535,7 +535,7 @@ p {
     }
 
     .saludo {
-        width: 100px;
+        width: 150px;
         margin: 0;
     }
 
