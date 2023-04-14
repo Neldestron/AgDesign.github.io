@@ -1,23 +1,30 @@
 @import url(/owners/Owner.css);
-body{
-    overflow:scroll;
+
+body {
+    overflow: scroll;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+
 body::-webkit-scrollbar {
-    width: 12px;             /* width of the entire scrollbar */
-  }
-  
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
 body::-webkit-scrollbar-track {
     background: black;
-    border-radius: 20px;         /* color of the tracking area */
-  }
-  
+    border-radius: 20px;
+    /* color of the tracking area */
+}
+
 body::-webkit-scrollbar-thumb {
-    background-color: white;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 3px solid black;  /* creates padding around scroll thumb */
-  }
+    background-color: white;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid black;
+    /* creates padding around scroll thumb */
+}
 
 article {
     width: 100%;
@@ -26,12 +33,12 @@ article {
     margin-top: 10px;
 }
 
-.information-container{
+.information-container {
     width: 100%;
     height: auto;
 }
 
-.information{
+.information {
     height: 80vh;
     min-height: 600px;
     width: 100%;
@@ -39,7 +46,9 @@ article {
     align-items: center;
 }
 
-.information1,.information2,.information3{
+.information1,
+.information2,
+.information3 {
     position: relative;
     width: 38%;
     height: 100%;
@@ -48,40 +57,52 @@ article {
     place-items: center;
     background-color: black;
     overflow: hidden;
+    z-index: 1;
 }
-.information1::before,.information2::before,.information3::before{
-    content: '';
-    position: absolute;
-    width:  220%;
-    height: 220%;
-    background-image: conic-gradient(transparent,transparent,transparent,red);
-    animation: rotate 4s linear infinite;
-}
-.information1::after,.information2::after,.information3::after{
+
+.information1::before,
+.information2::before,
+.information3::before {
     content: '';
     position: absolute;
     width: 220%;
     height: 220%;
-    background-image: conic-gradient(transparent,transparent,transparent,rgb(136, 136, 136));
+    background-image: conic-gradient(transparent, transparent, transparent, red);
+    animation: rotate 4s linear infinite;
+}
+
+.information1::after,
+.information2::after,
+.information3::after {
+    content: '';
+    position: absolute;
+    width: 220%;
+    height: 220%;
+    background-image: conic-gradient(transparent, transparent, transparent, rgb(136, 136, 136));
     animation: rotate 4s linear infinite;
     animation-delay: -2s;
 }
 
-.information1{
+.information1 {
     margin-left: auto;
     margin-right: 3vh;
 }
-.information2{
+
+.information2 {
     margin-right: auto;
     margin-left: 3vh;
     margin-top: 3vh;
 }
-.information3{
+
+.information3 {
     margin-left: auto;
     margin-right: 3vh;
     margin-top: 5vh;
 }
-.show-info1,.show-info2,.show-info3{
+
+.show-info1,
+.show-info2,
+.show-info3 {
     width: 35%;
     height: 70%;
     min-height: 560px;
@@ -91,35 +112,43 @@ article {
     position: absolute;
     color: white;
     background-color: rgba(94, 93, 93, 0.267);
-    transition:2s;
+    transition: 2s;
 }
-.show-info1,.show-info3{
+
+.show-info1,
+.show-info3 {
     left: 0%;
     transition: 2s;
 }
-.info2{
+
+.info2 {
     right: 5vh;
-    transition:2s;
+    transition: 2s;
 }
 
-.info4{
+.info4 {
     right: -50%;
-    transition:3s;
+    transition: 3s;
 }
-.info1,.info3{
+
+.info1,
+.info3 {
     left: -50%;
-    transition:3s;
+    transition: 3s;
 }
 
-
-
-.information-tittle,.information-plan,.information-price{
+.information-tittle,
+.information-plan,
+.information-price {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.information-1,.information-2,.information-3{
+
+.information-1,
+.information-2,
+.information-3 {
     position: absolute;
     display: inline-block;
     inset: 5px;
@@ -128,38 +157,44 @@ article {
     z-index: 2;
 }
 
-.information-tittle{
+.information-tittle {
     height: 10%;
     text-align: center;
 }
-.information-tittle h1{
+
+.information-tittle h1 {
     font-size: 24px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 500%;
     animation: color 10s linear infinite;
 }
-.hg{
-    background-image: linear-gradient(60deg,white,white,gold,white,white);
+
+.hg {
+    background-image: linear-gradient(60deg, white, white, gold, white, white);
 }
-.hs{
-    background-image: linear-gradient(60deg,white,white,rgb(94, 92, 92),white,white);
+
+.hs {
+    background-image: linear-gradient(60deg, white, white, rgb(94, 92, 92), white, white);
 }
-.hb{
-    background-image: linear-gradient(60deg,white,white,#a1671b,white,white);
+
+.hb {
+    background-image: linear-gradient(60deg, white, white, #a1671b, white, white);
 }
-.information-plan{
+
+.information-plan {
     height: 80%;
     color: white;
 }
 
-.information-price{
+.information-price {
     height: 10%;
     font-size: 16px;
     display: flex;
 }
 
-.information-price p,a {
+.information-price p,
+a {
     text-decoration: none;
     height: 10%;
     color: white;
@@ -167,22 +202,27 @@ article {
     cursor: pointer;
     transition: .6s;
 }
-.information-price p:hover,a:hover{
+
+.information-price p:hover,
+a:hover {
     animation: none;
     color: rgb(182, 0, 0);
     text-shadow: 0 0 10px rgba(155, 38, 38, 0.685);
     letter-spacing: 1px;
     transition: .6s;
 }
-.btn-price,.btn-info{
+
+.btn-price,
+.btn-info {
     margin-left: 10px;
 }
 
 @keyframes color {
-    to{
+    to {
         background-position: 0% 50%;
     }
-    from{
+
+    from {
         background-position: 100% 50%;
     }
 }
@@ -191,7 +231,72 @@ article {
     0% {
         transform: rotate(0deg);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width:920px) {
+
+    .information1,
+    .information2,
+    .information3 {
+        width: 80%;
+        height: 100%;
+    }
+
+    .information1 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .information2 {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .information3 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .show-info1,
+    .show-info2,
+    .show-info3 {
+        width: 70%;
+        height: 65%;
+        min-height: 300px;
+        margin-left: 0px;
+        left: 0%;
+        left: 15%;
+        right: 15%;
+        filter: opacity(100%);
+        z-index: 3;
+        transition: 1s;
+    }
+
+    .info2 {
+        right: 0vh;
+    }
+
+    .show-info2,
+    .show-info3 {
+        margin-top: 50px;
+    }
+
+    .show-info3 {
+        margin-top: 70px;
+    }
+
+    .info1,
+    .info3,
+    .info4 {
+        width: 70%;
+        height: 1px;
+        min-height: 1px;
+        filter: opacity(1%);
+        z-index: 0;
+        transition: 2s;
     }
 }
