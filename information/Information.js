@@ -37,6 +37,7 @@ let btnInfo3 = document.querySelector(".btn-info3")
         document.querySelector(".show-info1").classList.toggle("info1")
     }
     )
+
     btnInfo2.addEventListener("click", () => {
         document.querySelector(".show-info2").classList.toggle("info4")
     }

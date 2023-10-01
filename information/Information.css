@@ -4,6 +4,7 @@ body {
     overflow: scroll;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    min-width: 500px;
 }
 
 body::-webkit-scrollbar {
@@ -44,6 +45,13 @@ article {
     width: 100%;
     display: flex;
     align-items: center;
+}
+.article-img{
+    margin-left: 40%;
+}
+.article-img2{
+    margin-left: 0%;
+    margin-right: 40%;
 }
 
 .information1,
@@ -109,11 +117,14 @@ article {
     margin-top: 3vh;
     border-radius: 35px;
     margin-left: 5vh;
+    padding: 1vh;
     position: absolute;
     color: white;
     background-color: rgba(94, 93, 93, 0.267);
     transition: 2s;
 }
+
+
 
 .show-info1,
 .show-info3 {
@@ -184,8 +195,18 @@ article {
 
 .information-plan {
     height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
 }
+
+.information-plan img{
+    height: 100%;
+    width: 90%;
+    border-radius: 5vh;
+}  
 
 .information-price {
     height: 10%;
@@ -216,6 +237,68 @@ a:hover {
 .btn-info {
     margin-left: 10px;
 }
+.show-info2 p {
+    overflow:scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.show-info2 p::-webkit-scrollbar {
+    width: 12px;             /* width of the entire scrollbar */
+  }
+  
+  .show-info2 p::-webkit-scrollbar-track {
+    background: black;
+    border-radius: 20px;         /* color of the tracking area */
+  }
+  
+  .show-info2 p::-webkit-scrollbar-thumb {
+    background-color: white;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid black;  /* creates padding around scroll thumb */
+  }
+  .show-info1 p {
+    overflow:scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.show-info1 p::-webkit-scrollbar {
+    width: 12px;             /* width of the entire scrollbar */
+  }
+  
+  .show-info1 p::-webkit-scrollbar-track {
+    background: black;
+    border-radius: 20px;         /* color of the tracking area */
+  }
+  
+  .show-info1 p::-webkit-scrollbar-thumb {
+    background-color: white;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid black;  /* creates padding around scroll thumb */
+  }
+  .show-info3 p {
+    overflow:scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.show-info3 p::-webkit-scrollbar {
+    width: 12px;             /* width of the entire scrollbar */
+  }
+  
+  .show-info3 p::-webkit-scrollbar-track {
+    background: black;
+    border-radius: 20px;         /* color of the tracking area */
+  }
+  
+  .show-info3 p::-webkit-scrollbar-thumb {
+    background-color: white;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid black;  /* creates padding around scroll thumb */
+  }
+
+
 
 @keyframes color {
     to {
@@ -238,11 +321,16 @@ a:hover {
 }
 
 @media screen and (max-width:920px) {
+    .article-img{
+        position: absolute;
+        width: 0px;
+        height: 0px;
+    }
 
     .information1,
     .information2,
     .information3 {
-        width: 80%;
+        width: 60%;
         height: 100%;
     }
 
@@ -264,16 +352,24 @@ a:hover {
     .show-info1,
     .show-info2,
     .show-info3 {
-        width: 70%;
-        height: 65%;
+        width: 50%;
+        height: 60%;
         min-height: 300px;
         margin-left: 0px;
+        margin-bottom: 3vh;
         left: 0%;
-        left: 15%;
+        left: 24%;
         right: 15%;
         filter: opacity(100%);
         z-index: 3;
         transition: 1s;
+
+    }
+
+    .show-info1,
+    .show-info2,
+    .show-info3 p{
+        padding: 1%;
     }
 
     .info2 {
@@ -298,5 +394,42 @@ a:hover {
         filter: opacity(1%);
         z-index: 0;
         transition: 2s;
+    } 
+
+}
+
+@media screen and (max-width:800px) {
+    .information1,
+    .information2,
+    .information3 {
+        width: 70%;
+        height: 100%;
+        min-width: 400px;
+    }
+
+    .show-info1,
+    .show-info2,
+    .show-info3 {
+        width: 60%;
+        height: 60%;
+        min-height: 300px;
+        min-width: 300px;
+        margin-left: 0px;
+        margin-bottom: 3vh;
+        left: 19%;
+        right: auto;
+        filter: opacity(100%);
+        z-index: 3;
+        transition: 1s;
+
+    }
+}
+
+@media screen and (max-width:500px) {
+    .show-info1,
+    .show-info2,
+    .show-info3 {
+        left: 95px;
+        right: 0;
     }
 }

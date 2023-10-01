@@ -1,1 +1,113 @@
 @import url(/owners/Owner.css);
+
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+}
+
+.main .navigation {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.main .navigation span {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    background: #fff;
+    transform: translate(calc(30px * var(--x)), calc(30px * var(--y)));
+    transition: transform 0.5s, width 0.5s, height 0.5s, background 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .navigation:hover span {
+    background: #fc1212;
+}
+
+.main .navigation.active span {
+    width: 10vh;
+    height: 10vh;
+    background: #57575783;
+    transform: translate(calc(95px * var(--x)), calc(95px * var(--y)));
+}
+
+.main .navigation span ion-icon {
+    transition: 0.5s;
+    font-size: 0em;
+}
+
+.main .navigation.active span ion-icon {
+    font-size: 1.65em;
+    color: #fff;
+}
+
+.main .navigation.active span:hover ion-icon {
+    color: rgba(255, 22, 22, 0.863);
+    filter: drop-shadow(0 0 2px rgba(255, 22, 22, 0.863)) drop-shadow(0 0 3px rgba(255, 22, 22, 0.863)) drop-shadow(0 0 12px rgba(255, 22, 22, 0.863));
+}
+
+.close {
+    position: absolute;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    transition: 0.5s;
+    transition-delay: 0.4s;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .navigation.active~.close {
+    width: 8vh;
+    height: 8vh;
+    pointer-events: initial;
+    transition-delay: 0.8s;
+    background: rgba(255, 22, 22, 0.863);
+}
+
+.main .navigation~.close ion-icon {
+    font-size: 2em;
+    scale: 0;
+    color: #10131c;
+    transition: 0.5s;
+}
+
+.main .navigation.active~.close ion-icon {
+    scale: 1;
+    transition-delay: 1s;
+}
+
+@media screen and (min-width: 1200px) {
+    .main .navigation.active span {
+        transform: translate(calc(150% * var(--x)), calc(150% * var(--y)));
+    }
+}
+
+@media screen and (max-width:950px) {
+    .main .navigation.active span {
+        transform: translate(calc(120% * var(--x)), calc(120% * var(--y)));
+    }
+}
