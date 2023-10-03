@@ -3,7 +3,6 @@
 body {
     height: 100%;
     width: 100%;
-    overflow: hidden;
     background: #333333;
     background: linear-gradient(45deg,#333333,#000000,rgb(131, 1, 1));
     background-size: 400% 400%;
@@ -194,6 +193,7 @@ article {
         border-radius: 20px;       /* roundness of the scroll thumb */
         border: 3px solid black;  /* creates padding around scroll thumb */
       }
+
 }
 
 
@@ -218,7 +218,6 @@ article {
     .btn-owner-right{
         right:-1px;
     }
-
 }
 
 @media screen and (max-width:920px){
@@ -239,12 +238,17 @@ article {
         height: 40vh;
         animation: none;
         top: 5vh;
+
     }
     .img3{
-        top: 18vh;
+        top: 14vh;
+        width: 70vh;
+        transition: 0.5s;
     }
     .rotation{
         animation: none;
+        width: 57vh;
+        transition: 0.5s;
     }
     .Owner-img {
         width: 100%;
@@ -252,10 +256,10 @@ article {
         background-color:rgba(255, 0, 0, 0);
     }
     .btn-owner-right{
-        right:-5%;
+        right:10%;
     }
     .btn-owner-left {
-        left:2%;
+        left:16%;
     }
 
     .Owner-Information{
@@ -277,23 +281,34 @@ article {
         height: 0vh;
         transition: 1s;
     }
+
+    
+    footer{
+        margin-top: 60%;
+    }
 }
 
 @media screen and (max-width:900px) {
     .btn-owner-right{
-        right:-5%;
+        right:10%;
     }
     .btn-owner-left {
-        left: -2%;
+        left: 16%;
+    }
+    .img3{
+        top: 15vh;
+        width: 74vh;
+        transition: 0.5s;
+        margin-left: 3vh;
     }
 
 }
 @media screen and (max-width:850px) {
     .btn-owner-right{
-        right:-5%;
+        right:8%;
     }
     .btn-owner-left {
-        left: 2%;
+        left: 12%;
     }
 
 }
@@ -319,7 +334,7 @@ article {
         right:-3%;
     }
     .btn-owner-left {
-        left: -4%;
+        left: -3%;
     }
 
 }

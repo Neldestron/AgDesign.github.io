@@ -1,1 +1,12 @@
 @import url(/owners/Owner.css);
+
+.saludo{
+    width: auto;
+}
+
+
+@media screen and (max-width:920px){
+    footer{
+        margin-top: 0%;
+    }
+}

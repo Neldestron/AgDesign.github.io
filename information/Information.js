@@ -35,15 +35,18 @@ let btnInfo2 = document.querySelector(".btn-info2")
 let btnInfo3 = document.querySelector(".btn-info3")
     btnInfo1.addEventListener("click", () => {
         document.querySelector(".show-info1").classList.toggle("info1")
+        document.querySelector(".img-plan1").classList.toggle("img-plan")
     }
     )
 
     btnInfo2.addEventListener("click", () => {
         document.querySelector(".show-info2").classList.toggle("info4")
+        document.querySelector(".img-plan2").classList.toggle("img-plan")
     }
     )
     btnInfo3.addEventListener("click", () => {
         document.querySelector(".show-info3").classList.toggle("info3")
+        document.querySelector(".img-plan3").classList.toggle("img-plan")
     }
     )
 

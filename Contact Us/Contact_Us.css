@@ -6,6 +6,10 @@ article {
     align-items: center;
     min-height: 100vh;
 }
+.saludo{
+    width: auto;
+
+}
 
 .main {
     position: relative;
@@ -98,6 +102,10 @@ article {
 .main .navigation.active~.close ion-icon {
     scale: 1;
     transition-delay: 1s;
+}
+
+footer{
+    margin-top: 0%;
 }
 
 @media screen and (min-width: 1200px) {
