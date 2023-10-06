@@ -1,9 +1,36 @@
 @import url(/owners/Owner.css);
 
+
+.article-desingplans{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.price-gold,.price-silver,.price-bronze {
+    width: auto;
+    height: 100%;
+    margin: 1.5vh;
+    border-radius: 2vh;
+    background: linear-gradient(black,rgba(0, 0, 0, 0.137));
+    transition:1s;
+    /* border: 1px solid red; */
+}
+
+.price-gold:hover,.price-silver:hover,.price-bronze:hover{
+    background-color: black;
+    transition: 0.5s;
+}
+
 .saludo{
     width: auto;
 }
 
+.tittle-price,.benefit,.price{
+    width: 10%;
+    height: 10px;
+}
 
 @media screen and (max-width:920px){
     footer{

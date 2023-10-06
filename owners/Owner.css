@@ -339,12 +339,18 @@ article {
 
 }
 
-@media screen and (max-width:350px) {
+@media screen and (max-width:380px) {
     .btn-owner-right{
-        right:-3%;
+        right:-4%;
     }
     .btn-owner-left {
-        left: -7%;
+        left: -4%;
     }
 
+    .img3{
+        top: 26vh;
+        width: 50vh;
+        transition: 0.5s;
+        margin-left: 3vh;
+    }
 }
