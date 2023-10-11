@@ -185,3 +185,18 @@
         margin-top: 150vh;
     }
 }
+
+@media screen and (max-width:450px){
+    .price-gold,.price-silver,.price-bronze {
+        width: 90%;
+    }
+    .tittle-price h1{
+        font-size: 100%;
+    }
+}
+
+@media screen and (max-width:300px){
+    .article-desingplans{
+        margin-top: 10px;
+    }
+}
