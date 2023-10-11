@@ -322,12 +322,45 @@ article {
 }
 @media screen and (max-width:500px) {
     .btn-owner-right{
-        right:-5%;
+        right:-7%;
     }
     .btn-owner-left {
-        left: -3%;
+        left: -6%;
+    }
+    .rotation{
+        animation: none;
+        width: 50vh;
+        transition: 0.5s;
+    }
+    .img3{
+        top: 17vh;
+        width: 52vh;
+        transition: 0.5s;
+        margin-left: 3vh;
     }
 
+}
+@media screen and (max-width:450px) {
+    .btn-owner-right{
+        right:-6%;
+    }
+    .btn-owner-left {
+        left: -5%;
+    }
+    .rotation{
+        animation: none;
+        width: 45vh;
+        transition: 0.5s;
+    }
+    .img3{
+        top: 24vh;
+        width: 45vh;
+        transition: 0.5s;
+        margin-left: 3vh;
+    }
+    footer{
+       width: 102%;
+    }
 }
 @media screen and (max-width:400px) {
     .btn-owner-right{
